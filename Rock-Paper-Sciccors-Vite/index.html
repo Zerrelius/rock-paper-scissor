@@ -9,47 +9,47 @@
   <title>Rock Paper Scissors</title>
 </head>
 
-<body class="container mx-auto bg-gradient-to-b from-slate-900 to-blue-600 text-white font-sans">
+<body class="container mx-auto bg-gradient-to-b from-slate-900 to-blue-600 text-white font-custom">
   <!-- Header-Bereich -->
-  <header class="justify-center items-center flex flex-col">
-    <h1 class="text-6xl">Rock Paper Scissors</h1>
-    <div class="text-2xl mt-5 bg-slate-600 width-40px p-2 rounded-lg">
+  <header class="justify-center items-center flex flex-col mt-20">
+    <h1 class="font-custom text-6xl">Rock Paper Scissors</h1>
+    <div class="text-2xl mt-5 bg-white text-slate-900 font-bold flex flex-col justify-center items-center width-40px p-2 rounded-lg">
       <span>Score</span>
       <span id="score">0</span>
     </div>
   </header>
 
   <!-- Hauptbereich mit Buttons -->
-  <main class="block justify-center items-center mx-auto mt-10">
-    <button class="block p-2 bg-white border-2 rounded-full border-red-500 size-24 ml-14 mb-1 hover:size-28" data-choice="paper">
+  <main class="block text-center mx-auto mt-10">
+    <button class="block text-center mx-auto col-span-2 size-24 p-2 bg-white border-8 rounded-full border-red-500 hover:size-28" data-choice="paper">
       <img src="./images/paper.svg" alt="Paper" />
     </button>
-    <button class="size-24 p-2 bg-white border-2 rounded-full border-green-500 mr-4 hover:size-28" data-choice="scissors">
+    <button class="size-24 mr-4 p-2 bg-white border-8 rounded-full border-green-500 hover:size-28" data-choice="scissors">
       <img src="./images/scissors.svg" alt="Scissors" />
     </button>
-    <button class="size-24 p-2 bg-white border-2 rounded-full border-yellow-500 hover:size-28" data-choice="rock">
+    <button class="size-24 p-2 bg-white border-8 rounded-full border-yellow-500 hover:size-28" data-choice="rock">
       <img src="./images/rock.svg" alt="Rock" />
     </button>
   </main>
 
   <!-- Startbildschirm -->
-  <div id="startscreen">
-    <h1>Rock</h1>
-    <h2>Paper</h2>
-    <h3>Scissors</h3>
-    <button id="startbutton">Start Game</button>
+  <div class="hidden font-custom absolute top-0 left-0 size-full place-content-center index-1 bg-gradient-to-b from-slate-900 to-blue-600 text-center" id="startscreen">
+    <h1 class="text-8xl mb-2">Rock</h1>
+    <h2 class="text-8xl mb-2">Paper</h2>
+    <h3 class="text-8xl mb-2">Scissors</h3>
+    <button class="border-2 rounded-full p-4 mt-10 text-4xl hover:text-6xl" id="startbutton">Start Game</button>
   </div>
 
   <!-- Regeln -->
-  <div id="rules">
-    <h2>Rules</h2>
-    <p>Rock Paper Scissors is a game that is played between two players...</p>
-    <img class="size-5" src="./images/close.svg" alt="Close" id="closebutton" />
+  <div class="flex flex-col justify-end items-end text-center" id="rules">
+    <h2 class="w-40 border-2 rounded-full mt-10 p-4">Rules</h2>
+    <p class="mt-5">Rock Paper Scissors is a game that is played between two players...</p>
+    <img class="absolute top-10 right-10 size-5 hover:size-8" src="./images/close.svg" alt="Close" id="closebutton" />
   </div>
 
   <!-- Ergebnisanzeige -->
-  <div id="results">
-    <h3 id="result">You win</h3>
+  <div class="hidden absolute flex flex-col justify-center items-center size-full index-1 top-0 left-0 bg-gradient-to-b from-slate-900 to-blue-600 text-4xl gap-6" id="results">
+    <h3 class="text-sky-400 text-9xl font-custom border-8 border-sky-600 rounded-full bg-gradient-to-br from-slate-900 to-red-800 p-10" id="result">You win</h3>
     <div>
       <p>You chose:</p>
       <div id="userchoice"></div>
@@ -58,7 +58,7 @@
       <p>Computer chose:</p>
       <div id="computerchoice"></div>
     </div>
-    <button id="playagain">Play Again</button>
+    <button class="border-4 rounded-full p-4 font-custom mt-10 hover:text-6xl" id="playagain">Play Again</button>
   </div>
 </body>
 </html>
