@@ -1,4 +1,6 @@
 // Logic for Computer to Choice Randomly between Rock, Paper, Scissors
+
+// Get Computer Choice
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
   const randomNumber = Math.floor(Math.random() * 3);
@@ -16,5 +18,5 @@ export function getResult(choice) {
     const computerChoice = getComputerChoice();
     const result = outcomes[userChoice][computerChoice];
     console.log(computerChoice);
-    return result;
+    return { result, userChoice, computerChoice };
 };
